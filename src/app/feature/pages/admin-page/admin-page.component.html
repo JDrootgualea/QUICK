@@ -1,0 +1,69 @@
+<div>
+
+    <app-header></app-header>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+        <!-- Position Column -->
+        <ng-container matColumnDef="athlete">
+          <th mat-header-cell *matHeaderCellDef> Atleta </th>
+          <td mat-cell *matCellDef="let element"> {{element.athlete}} </td>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="age">
+          <th mat-header-cell *matHeaderCellDef> Edad </th>
+          <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+        </ng-container>
+      
+        <!-- Weight Column -->
+        <ng-container matColumnDef="country">
+          <th mat-header-cell *matHeaderCellDef> Pais </th>
+          <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+        </ng-container>
+      
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="year">
+          <th mat-header-cell *matHeaderCellDef> Año </th>
+          <td mat-cell *matCellDef="let element"> {{element.year}} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="date">
+          <th mat-header-cell *matHeaderCellDef> fecha </th>
+          <td mat-cell *matCellDef="let element"> {{element.date}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="sport">
+          <th mat-header-cell *matHeaderCellDef> Deporte </th>
+          <td mat-cell *matCellDef="let element"> {{element.sport}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="gold">
+          <th mat-header-cell *matHeaderCellDef> Oro </th>
+          <td mat-cell *matCellDef="let element"> {{element.gold}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="silver">
+          <th mat-header-cell *matHeaderCellDef> plata </th>
+          <td mat-cell *matCellDef="let element"> {{element.silver}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="bronze">
+          <th mat-header-cell *matHeaderCellDef> Bronce </th>
+          <td mat-cell *matCellDef="let element"> {{element.bronze}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="total">
+          <th mat-header-cell *matHeaderCellDef> Resultado </th>
+          <td mat-cell *matCellDef="let element"> {{element.total}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+</div>
