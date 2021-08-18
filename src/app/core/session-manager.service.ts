@@ -37,14 +37,14 @@ private profileHomeRedirect(username:string):void{
 
  if(username==="administrador"){
   this.userData.next({
-      perfil:"administrador",
+      perfil:"Julian",
       usuario: username
   })
   
 this.router.navigate(["administrador"]);
  }else if( username==="coordinador"){
   this.userData.next({
-    perfil:"coordinador",
+    perfil:"Julian",
     usuario: username
 })
   this.router.navigate(["coordinador"]);
